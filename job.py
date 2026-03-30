@@ -186,6 +186,8 @@ def scrape_jobs():
 
         queries.append(keyword)
 
+        
+
     with ThreadPoolExecutor(max_workers=THREADS) as executor:
 
         futures = []
