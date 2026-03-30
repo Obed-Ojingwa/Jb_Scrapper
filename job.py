@@ -9,6 +9,7 @@ Fixes:
 - Excel export
 """
 
+import utils.session
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
@@ -185,6 +186,8 @@ def scrape_jobs():
             queries.append(f"{keyword} site:{site}")
 
         queries.append(keyword)
+
+        
 
     with ThreadPoolExecutor(max_workers=THREADS) as executor:
 
